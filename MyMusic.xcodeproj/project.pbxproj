@@ -42,9 +42,9 @@
 		9046DD7B1D73DDD000EE6357 /* QMMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7A1D73DDD000EE6357 /* QMMusicModel.swift */; };
 		9046DD7D1D73EAE100EE6357 /* QMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */; };
 		9046DD801D73FAC900EE6357 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7F1D73FAC900EE6357 /* UIImageView+Extension.swift */; };
-		9046DD821D74045900EE6357 /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD811D74045900EE6357 /* MusicPlayerView.xib */; };
-		9046DD841D74051500EE6357 /* QMMusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */; };
 		9046DD861D7407C800EE6357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD851D7407C800EE6357 /* Main.storyboard */; };
+		9046DD8D1D741AA300EE6357 /* QMMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD8B1D741AA300EE6357 /* QMMusicViewController.swift */; };
+		9046DD8E1D741AA300EE6357 /* QMMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD8C1D741AA300EE6357 /* QMMusicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,9 +85,9 @@
 		9046DD7A1D73DDD000EE6357 /* QMMusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicModel.swift; sourceTree = "<group>"; };
 		9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMTableViewCell.swift; sourceTree = "<group>"; };
 		9046DD7F1D73FAC900EE6357 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		9046DD811D74045900EE6357 /* MusicPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MusicPlayerView.xib; path = ../Controller/MusicPlayerView.xib; sourceTree = "<group>"; };
-		9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QMMusicPlayerView.swift; path = ../Controller/QMMusicPlayerView.swift; sourceTree = "<group>"; };
 		9046DD851D7407C800EE6357 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9046DD8B1D741AA300EE6357 /* QMMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicViewController.swift; sourceTree = "<group>"; };
+		9046DD8C1D741AA300EE6357 /* QMMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QMMusicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +136,8 @@
 				9046DD3A1D73D56000EE6357 /* QMTableViewController.swift */,
 				9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */,
 				9046DD851D7407C800EE6357 /* Main.storyboard */,
+				9046DD8B1D741AA300EE6357 /* QMMusicViewController.swift */,
+				9046DD8C1D741AA300EE6357 /* QMMusicViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,8 +207,6 @@
 		9046DD791D73DD9400EE6357 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9046DD811D74045900EE6357 /* MusicPlayerView.xib */,
-				9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9046DD6E1D73D73F00EE6357 /* hemanting.jpg in Resources */,
+				9046DD8E1D741AA300EE6357 /* QMMusicViewController.xib in Resources */,
 				9046DD311D73C5D600EE6357 /* LaunchScreen.storyboard in Resources */,
 				9046DD2E1D73C5D600EE6357 /* Assets.xcassets in Resources */,
 				9046DD601D73D73F00EE6357 /* meiyoushenmebutong_2.krc in Resources */,
@@ -291,7 +292,6 @@
 				9046DD861D7407C800EE6357 /* Main.storyboard in Resources */,
 				9046DD741D73D73F00EE6357 /* wangyuanyuan.jpg in Resources */,
 				9046DD671D73D73F00EE6357 /* caihong_5.mp3 in Resources */,
-				9046DD821D74045900EE6357 /* MusicPlayerView.xib in Resources */,
 				9046DD631D73D73F00EE6357 /* sanqisiqie_3.mp3 in Resources */,
 				9046DD5D1D73D73F00EE6357 /* suyan_0.mp3 in Resources */,
 				9046DD751D73D73F00EE6357 /* yixin.jpg in Resources */,
@@ -322,8 +322,8 @@
 				9046DD801D73FAC900EE6357 /* UIImageView+Extension.swift in Sources */,
 				9046DD271D73C5D600EE6357 /* AppDelegate.swift in Sources */,
 				9046DD7B1D73DDD000EE6357 /* QMMusicModel.swift in Sources */,
-				9046DD841D74051500EE6357 /* QMMusicPlayerView.swift in Sources */,
 				9046DD7D1D73EAE100EE6357 /* QMTableViewCell.swift in Sources */,
+				9046DD8D1D741AA300EE6357 /* QMMusicViewController.swift in Sources */,
 				9046DD3B1D73D56000EE6357 /* QMTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

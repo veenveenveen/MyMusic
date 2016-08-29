@@ -24,6 +24,12 @@ class QMTableViewController: UITableViewController {
         return array
     }()
     
+    lazy var musicViewController: QMMusicViewController = {
+        let musicVW = QMMusicViewController(nibName: "QMMusicViewController", bundle: nil)
+        musicVW.view.frame = CGRectMake(0, 667, 375, 667)
+        return musicVW
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        for a in musics {
@@ -33,7 +39,10 @@ class QMTableViewController: UITableViewController {
 //            print(a.singer)
 //            print(a.icon)
 //        }
+        
         setTableView()
+        
+//        musicView.backgroundColor = UIColor.clearColor()
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -60,7 +69,7 @@ class QMTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 9
+        return musics.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -77,6 +86,7 @@ class QMTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //取消选中的这行
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        musicViewController.showView()
     }
 
 }
