@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S4p-rY-QTS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--QM Table View Controller-->
+        <scene sceneID="leo-FK-Vgd">
+            <objects>
+                <tableViewController id="MqW-n8-Fp3" userLabel="QM Table View Controller" customClass="QMTableViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="oGU-WX-ZXi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="music_cell" rowHeight="60" id="Et1-Lm-Ihx" customClass="QMTableViewCell" customModule="MyMusic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Et1-Lm-Ihx" id="yDV-Tj-7f2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dengziqi.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-po-7Kh">
+                                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="4pA-7P-HTK"/>
+                                                <constraint firstAttribute="height" constant="40" id="KPa-a4-nfr"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-SK-cXA">
+                                            <rect key="frame" x="65" y="10" width="45" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="singer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-Nv-TJ8">
+                                            <rect key="frame" x="65" y="33" width="40" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY8-dx-8Rm">
+                                            <rect key="frame" x="65" y="58" width="535" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="xa0-gk-sTs"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hPb-Nv-TJ8" firstAttribute="leading" secondItem="pfP-SK-cXA" secondAttribute="leading" id="0Yv-KV-Pbm"/>
+                                        <constraint firstItem="m5N-po-7Kh" firstAttribute="centerY" secondItem="yDV-Tj-7f2" secondAttribute="centerY" id="2m2-k5-fLG"/>
+                                        <constraint firstItem="pfP-SK-cXA" firstAttribute="top" secondItem="m5N-po-7Kh" secondAttribute="top" id="Few-dX-qkt"/>
+                                        <constraint firstItem="m5N-po-7Kh" firstAttribute="leading" secondItem="yDV-Tj-7f2" secondAttribute="leading" constant="10" id="MNl-pc-bPt"/>
+                                        <constraint firstAttribute="trailing" secondItem="AY8-dx-8Rm" secondAttribute="trailing" id="ica-ta-O5V"/>
+                                        <constraint firstItem="AY8-dx-8Rm" firstAttribute="leading" secondItem="hPb-Nv-TJ8" secondAttribute="leading" id="lhk-yu-2kk"/>
+                                        <constraint firstAttribute="bottom" secondItem="AY8-dx-8Rm" secondAttribute="bottom" id="m7Y-iX-whs"/>
+                                        <constraint firstItem="hPb-Nv-TJ8" firstAttribute="bottom" secondItem="m5N-po-7Kh" secondAttribute="bottom" id="mlB-0G-zRg"/>
+                                        <constraint firstItem="pfP-SK-cXA" firstAttribute="leading" secondItem="m5N-po-7Kh" secondAttribute="trailing" constant="15" id="zsf-8b-PRo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="pfP-SK-cXA" id="ebt-RP-W2p"/>
+                                    <outlet property="singer" destination="hPb-Nv-TJ8" id="eUm-3g-hph"/>
+                                    <outlet property="singleIcon" destination="m5N-po-7Kh" id="Eiq-i2-5bB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MqW-n8-Fp3" id="4x7-dv-tZ3"/>
+                            <outlet property="delegate" destination="MqW-n8-Fp3" id="k7h-oA-icp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="音乐列表" id="WVq-0f-flT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hx-qU-ESD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OVM-HO-pxu">
+            <objects>
+                <navigationController id="S4p-rY-QTS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mud-Mw-g9f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MqW-n8-Fp3" kind="relationship" relationship="rootViewController" id="MWf-lq-GDy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uL4-I3-ZhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="365"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dengziqi.jpg" width="1920" height="1080"/>
+    </resources>
+</document>

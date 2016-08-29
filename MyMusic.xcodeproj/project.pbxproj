@@ -8,20 +8,86 @@
 
 /* Begin PBXBuildFile section */
 		9046DD271D73C5D600EE6357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD261D73C5D600EE6357 /* AppDelegate.swift */; };
-		9046DD291D73C5D600EE6357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD281D73C5D600EE6357 /* ViewController.swift */; };
-		9046DD2C1D73C5D600EE6357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD2A1D73C5D600EE6357 /* Main.storyboard */; };
 		9046DD2E1D73C5D600EE6357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD2D1D73C5D600EE6357 /* Assets.xcassets */; };
 		9046DD311D73C5D600EE6357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD2F1D73C5D600EE6357 /* LaunchScreen.storyboard */; };
+		9046DD3B1D73D56000EE6357 /* QMTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD3A1D73D56000EE6357 /* QMTableViewController.swift */; };
+		9046DD3F1D73D5DF00EE6357 /* Music.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD3E1D73D5DF00EE6357 /* Music.plist */; };
+		9046DD5C1D73D73F00EE6357 /* suyan_0.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD411D73D73F00EE6357 /* suyan_0.krc */; };
+		9046DD5D1D73D73F00EE6357 /* suyan_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD421D73D73F00EE6357 /* suyan_0.mp3 */; };
+		9046DD5E1D73D73F00EE6357 /* guoqiao_1.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD431D73D73F00EE6357 /* guoqiao_1.krc */; };
+		9046DD5F1D73D73F00EE6357 /* guoqiao_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD441D73D73F00EE6357 /* guoqiao_1.mp3 */; };
+		9046DD601D73D73F00EE6357 /* meiyoushenmebutong_2.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD451D73D73F00EE6357 /* meiyoushenmebutong_2.krc */; };
+		9046DD611D73D73F00EE6357 /* meiyoushenmebutong_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD461D73D73F00EE6357 /* meiyoushenmebutong_2.mp3 */; };
+		9046DD621D73D73F00EE6357 /* sanqisiqie_3.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD471D73D73F00EE6357 /* sanqisiqie_3.krc */; };
+		9046DD631D73D73F00EE6357 /* sanqisiqie_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD481D73D73F00EE6357 /* sanqisiqie_3.mp3 */; };
+		9046DD641D73D73F00EE6357 /* xinsui_4.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD491D73D73F00EE6357 /* xinsui_4.krc */; };
+		9046DD651D73D73F00EE6357 /* xinsui_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4A1D73D73F00EE6357 /* xinsui_4.mp3 */; };
+		9046DD661D73D73F00EE6357 /* caihong_5.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4B1D73D73F00EE6357 /* caihong_5.krc */; };
+		9046DD671D73D73F00EE6357 /* caihong_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4C1D73D73F00EE6357 /* caihong_5.mp3 */; };
+		9046DD681D73D73F00EE6357 /* wujinkongxu_6.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4D1D73D73F00EE6357 /* wujinkongxu_6.krc */; };
+		9046DD691D73D73F00EE6357 /* wujinkongxu_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4E1D73D73F00EE6357 /* wujinkongxu_6.mp3 */; };
+		9046DD6A1D73D73F00EE6357 /* beyond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD4F1D73D73F00EE6357 /* beyond.jpg */; };
+		9046DD6B1D73D73F00EE6357 /* dengziqi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD501D73D73F00EE6357 /* dengziqi.jpg */; };
+		9046DD6C1D73D73F00EE6357 /* paomo_7.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD511D73D73F00EE6357 /* paomo_7.krc */; };
+		9046DD6D1D73D73F00EE6357 /* paomo_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD521D73D73F00EE6357 /* paomo_7.mp3 */; };
+		9046DD6E1D73D73F00EE6357 /* hemanting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD531D73D73F00EE6357 /* hemanting.jpg */; };
+		9046DD6F1D73D73F00EE6357 /* houxian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD541D73D73F00EE6357 /* houxian.jpg */; };
+		9046DD701D73D73F00EE6357 /* quwanting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD551D73D73F00EE6357 /* quwanting.jpg */; };
+		9046DD711D73D73F00EE6357 /* lgrhuangdao_8.krc in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD561D73D73F00EE6357 /* lgrhuangdao_8.krc */; };
+		9046DD721D73D73F00EE6357 /* lgrhuangdao_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD571D73D73F00EE6357 /* lgrhuangdao_8.mp3 */; };
+		9046DD731D73D73F00EE6357 /* she.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD581D73D73F00EE6357 /* she.jpg */; };
+		9046DD741D73D73F00EE6357 /* wangyuanyuan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD591D73D73F00EE6357 /* wangyuanyuan.jpg */; };
+		9046DD751D73D73F00EE6357 /* yixin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD5A1D73D73F00EE6357 /* yixin.jpg */; };
+		9046DD761D73D73F00EE6357 /* zhoujielun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD5B1D73D73F00EE6357 /* zhoujielun.jpg */; };
+		9046DD7B1D73DDD000EE6357 /* QMMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7A1D73DDD000EE6357 /* QMMusicModel.swift */; };
+		9046DD7D1D73EAE100EE6357 /* QMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */; };
+		9046DD801D73FAC900EE6357 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD7F1D73FAC900EE6357 /* UIImageView+Extension.swift */; };
+		9046DD821D74045900EE6357 /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD811D74045900EE6357 /* MusicPlayerView.xib */; };
+		9046DD841D74051500EE6357 /* QMMusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */; };
+		9046DD861D7407C800EE6357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD851D7407C800EE6357 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9046DD231D73C5D600EE6357 /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9046DD261D73C5D600EE6357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9046DD281D73C5D600EE6357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9046DD2B1D73C5D600EE6357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9046DD2D1D73C5D600EE6357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9046DD301D73C5D600EE6357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9046DD321D73C5D600EE6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9046DD3A1D73D56000EE6357 /* QMTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMTableViewController.swift; sourceTree = "<group>"; };
+		9046DD3E1D73D5DF00EE6357 /* Music.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Music.plist; sourceTree = "<group>"; };
+		9046DD411D73D73F00EE6357 /* suyan_0.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = suyan_0.krc; sourceTree = "<group>"; };
+		9046DD421D73D73F00EE6357 /* suyan_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = suyan_0.mp3; sourceTree = "<group>"; };
+		9046DD431D73D73F00EE6357 /* guoqiao_1.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = guoqiao_1.krc; sourceTree = "<group>"; };
+		9046DD441D73D73F00EE6357 /* guoqiao_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guoqiao_1.mp3; sourceTree = "<group>"; };
+		9046DD451D73D73F00EE6357 /* meiyoushenmebutong_2.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = meiyoushenmebutong_2.krc; sourceTree = "<group>"; };
+		9046DD461D73D73F00EE6357 /* meiyoushenmebutong_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meiyoushenmebutong_2.mp3; sourceTree = "<group>"; };
+		9046DD471D73D73F00EE6357 /* sanqisiqie_3.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = sanqisiqie_3.krc; sourceTree = "<group>"; };
+		9046DD481D73D73F00EE6357 /* sanqisiqie_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sanqisiqie_3.mp3; sourceTree = "<group>"; };
+		9046DD491D73D73F00EE6357 /* xinsui_4.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = xinsui_4.krc; sourceTree = "<group>"; };
+		9046DD4A1D73D73F00EE6357 /* xinsui_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = xinsui_4.mp3; sourceTree = "<group>"; };
+		9046DD4B1D73D73F00EE6357 /* caihong_5.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = caihong_5.krc; sourceTree = "<group>"; };
+		9046DD4C1D73D73F00EE6357 /* caihong_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = caihong_5.mp3; sourceTree = "<group>"; };
+		9046DD4D1D73D73F00EE6357 /* wujinkongxu_6.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = wujinkongxu_6.krc; sourceTree = "<group>"; };
+		9046DD4E1D73D73F00EE6357 /* wujinkongxu_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wujinkongxu_6.mp3; sourceTree = "<group>"; };
+		9046DD4F1D73D73F00EE6357 /* beyond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beyond.jpg; sourceTree = "<group>"; };
+		9046DD501D73D73F00EE6357 /* dengziqi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dengziqi.jpg; sourceTree = "<group>"; };
+		9046DD511D73D73F00EE6357 /* paomo_7.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = paomo_7.krc; sourceTree = "<group>"; };
+		9046DD521D73D73F00EE6357 /* paomo_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = paomo_7.mp3; sourceTree = "<group>"; };
+		9046DD531D73D73F00EE6357 /* hemanting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hemanting.jpg; sourceTree = "<group>"; };
+		9046DD541D73D73F00EE6357 /* houxian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = houxian.jpg; sourceTree = "<group>"; };
+		9046DD551D73D73F00EE6357 /* quwanting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quwanting.jpg; sourceTree = "<group>"; };
+		9046DD561D73D73F00EE6357 /* lgrhuangdao_8.krc */ = {isa = PBXFileReference; lastKnownFileType = file; path = lgrhuangdao_8.krc; sourceTree = "<group>"; };
+		9046DD571D73D73F00EE6357 /* lgrhuangdao_8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lgrhuangdao_8.mp3; sourceTree = "<group>"; };
+		9046DD581D73D73F00EE6357 /* she.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = she.jpg; sourceTree = "<group>"; };
+		9046DD591D73D73F00EE6357 /* wangyuanyuan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wangyuanyuan.jpg; sourceTree = "<group>"; };
+		9046DD5A1D73D73F00EE6357 /* yixin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yixin.jpg; sourceTree = "<group>"; };
+		9046DD5B1D73D73F00EE6357 /* zhoujielun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhoujielun.jpg; sourceTree = "<group>"; };
+		9046DD7A1D73DDD000EE6357 /* QMMusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicModel.swift; sourceTree = "<group>"; };
+		9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMTableViewCell.swift; sourceTree = "<group>"; };
+		9046DD7F1D73FAC900EE6357 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		9046DD811D74045900EE6357 /* MusicPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MusicPlayerView.xib; path = ../Controller/MusicPlayerView.xib; sourceTree = "<group>"; };
+		9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QMMusicPlayerView.swift; path = ../Controller/QMMusicPlayerView.swift; sourceTree = "<group>"; };
+		9046DD851D7407C800EE6357 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +120,103 @@
 		9046DD251D73C5D600EE6357 /* MyMusic */ = {
 			isa = PBXGroup;
 			children = (
+				9046DD781D73DD6400EE6357 /* Model */,
+				9046DD791D73DD9400EE6357 /* View */,
+				9046DD381D73D45B00EE6357 /* Controller */,
+				9046DD7E1D73FA5100EE6357 /* Tools */,
+				9046DD401D73D6EF00EE6357 /* Resources */,
+				9046DD391D73D46A00EE6357 /* Other */,
+			);
+			path = MyMusic;
+			sourceTree = "<group>";
+		};
+		9046DD381D73D45B00EE6357 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD3A1D73D56000EE6357 /* QMTableViewController.swift */,
+				9046DD7C1D73EAE100EE6357 /* QMTableViewCell.swift */,
+				9046DD851D7407C800EE6357 /* Main.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9046DD391D73D46A00EE6357 /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				9046DD261D73C5D600EE6357 /* AppDelegate.swift */,
-				9046DD281D73C5D600EE6357 /* ViewController.swift */,
-				9046DD2A1D73C5D600EE6357 /* Main.storyboard */,
-				9046DD2D1D73C5D600EE6357 /* Assets.xcassets */,
 				9046DD2F1D73C5D600EE6357 /* LaunchScreen.storyboard */,
 				9046DD321D73C5D600EE6357 /* Info.plist */,
 			);
-			path = MyMusic;
+			name = Other;
+			sourceTree = "<group>";
+		};
+		9046DD401D73D6EF00EE6357 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD2D1D73C5D600EE6357 /* Assets.xcassets */,
+				9046DD771D73DCDA00EE6357 /* MusicResource */,
+				9046DD3E1D73D5DF00EE6357 /* Music.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9046DD771D73DCDA00EE6357 /* MusicResource */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD411D73D73F00EE6357 /* suyan_0.krc */,
+				9046DD421D73D73F00EE6357 /* suyan_0.mp3 */,
+				9046DD431D73D73F00EE6357 /* guoqiao_1.krc */,
+				9046DD441D73D73F00EE6357 /* guoqiao_1.mp3 */,
+				9046DD451D73D73F00EE6357 /* meiyoushenmebutong_2.krc */,
+				9046DD461D73D73F00EE6357 /* meiyoushenmebutong_2.mp3 */,
+				9046DD471D73D73F00EE6357 /* sanqisiqie_3.krc */,
+				9046DD481D73D73F00EE6357 /* sanqisiqie_3.mp3 */,
+				9046DD491D73D73F00EE6357 /* xinsui_4.krc */,
+				9046DD4A1D73D73F00EE6357 /* xinsui_4.mp3 */,
+				9046DD4B1D73D73F00EE6357 /* caihong_5.krc */,
+				9046DD4C1D73D73F00EE6357 /* caihong_5.mp3 */,
+				9046DD4D1D73D73F00EE6357 /* wujinkongxu_6.krc */,
+				9046DD4E1D73D73F00EE6357 /* wujinkongxu_6.mp3 */,
+				9046DD4F1D73D73F00EE6357 /* beyond.jpg */,
+				9046DD501D73D73F00EE6357 /* dengziqi.jpg */,
+				9046DD511D73D73F00EE6357 /* paomo_7.krc */,
+				9046DD521D73D73F00EE6357 /* paomo_7.mp3 */,
+				9046DD531D73D73F00EE6357 /* hemanting.jpg */,
+				9046DD541D73D73F00EE6357 /* houxian.jpg */,
+				9046DD551D73D73F00EE6357 /* quwanting.jpg */,
+				9046DD561D73D73F00EE6357 /* lgrhuangdao_8.krc */,
+				9046DD571D73D73F00EE6357 /* lgrhuangdao_8.mp3 */,
+				9046DD581D73D73F00EE6357 /* she.jpg */,
+				9046DD591D73D73F00EE6357 /* wangyuanyuan.jpg */,
+				9046DD5A1D73D73F00EE6357 /* yixin.jpg */,
+				9046DD5B1D73D73F00EE6357 /* zhoujielun.jpg */,
+			);
+			path = MusicResource;
+			sourceTree = "<group>";
+		};
+		9046DD781D73DD6400EE6357 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD7A1D73DDD000EE6357 /* QMMusicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9046DD791D73DD9400EE6357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD811D74045900EE6357 /* MusicPlayerView.xib */,
+				9046DD831D74051500EE6357 /* QMMusicPlayerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9046DD7E1D73FA5100EE6357 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9046DD7F1D73FAC900EE6357 /* UIImageView+Extension.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +277,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9046DD6E1D73D73F00EE6357 /* hemanting.jpg in Resources */,
 				9046DD311D73C5D600EE6357 /* LaunchScreen.storyboard in Resources */,
 				9046DD2E1D73C5D600EE6357 /* Assets.xcassets in Resources */,
-				9046DD2C1D73C5D600EE6357 /* Main.storyboard in Resources */,
+				9046DD601D73D73F00EE6357 /* meiyoushenmebutong_2.krc in Resources */,
+				9046DD3F1D73D5DF00EE6357 /* Music.plist in Resources */,
+				9046DD621D73D73F00EE6357 /* sanqisiqie_3.krc in Resources */,
+				9046DD651D73D73F00EE6357 /* xinsui_4.mp3 in Resources */,
+				9046DD6B1D73D73F00EE6357 /* dengziqi.jpg in Resources */,
+				9046DD5C1D73D73F00EE6357 /* suyan_0.krc in Resources */,
+				9046DD6A1D73D73F00EE6357 /* beyond.jpg in Resources */,
+				9046DD701D73D73F00EE6357 /* quwanting.jpg in Resources */,
+				9046DD861D7407C800EE6357 /* Main.storyboard in Resources */,
+				9046DD741D73D73F00EE6357 /* wangyuanyuan.jpg in Resources */,
+				9046DD671D73D73F00EE6357 /* caihong_5.mp3 in Resources */,
+				9046DD821D74045900EE6357 /* MusicPlayerView.xib in Resources */,
+				9046DD631D73D73F00EE6357 /* sanqisiqie_3.mp3 in Resources */,
+				9046DD5D1D73D73F00EE6357 /* suyan_0.mp3 in Resources */,
+				9046DD751D73D73F00EE6357 /* yixin.jpg in Resources */,
+				9046DD721D73D73F00EE6357 /* lgrhuangdao_8.mp3 in Resources */,
+				9046DD691D73D73F00EE6357 /* wujinkongxu_6.mp3 in Resources */,
+				9046DD5E1D73D73F00EE6357 /* guoqiao_1.krc in Resources */,
+				9046DD5F1D73D73F00EE6357 /* guoqiao_1.mp3 in Resources */,
+				9046DD611D73D73F00EE6357 /* meiyoushenmebutong_2.mp3 in Resources */,
+				9046DD6C1D73D73F00EE6357 /* paomo_7.krc in Resources */,
+				9046DD681D73D73F00EE6357 /* wujinkongxu_6.krc in Resources */,
+				9046DD6D1D73D73F00EE6357 /* paomo_7.mp3 in Resources */,
+				9046DD711D73D73F00EE6357 /* lgrhuangdao_8.krc in Resources */,
+				9046DD761D73D73F00EE6357 /* zhoujielun.jpg in Resources */,
+				9046DD661D73D73F00EE6357 /* caihong_5.krc in Resources */,
+				9046DD6F1D73D73F00EE6357 /* houxian.jpg in Resources */,
+				9046DD731D73D73F00EE6357 /* she.jpg in Resources */,
+				9046DD641D73D73F00EE6357 /* xinsui_4.krc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +319,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9046DD291D73C5D600EE6357 /* ViewController.swift in Sources */,
+				9046DD801D73FAC900EE6357 /* UIImageView+Extension.swift in Sources */,
 				9046DD271D73C5D600EE6357 /* AppDelegate.swift in Sources */,
+				9046DD7B1D73DDD000EE6357 /* QMMusicModel.swift in Sources */,
+				9046DD841D74051500EE6357 /* QMMusicPlayerView.swift in Sources */,
+				9046DD7D1D73EAE100EE6357 /* QMTableViewCell.swift in Sources */,
+				9046DD3B1D73D56000EE6357 /* QMTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9046DD2A1D73C5D600EE6357 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9046DD2B1D73C5D600EE6357 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9046DD2F1D73C5D600EE6357 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
