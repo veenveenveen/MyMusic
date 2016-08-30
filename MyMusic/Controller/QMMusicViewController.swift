@@ -9,11 +9,29 @@
 import UIKit
 
 class QMMusicViewController: UIViewController {
-
+//MARK: - 属性
     var window: UIWindow?
     
+    //进度条 滑块 歌曲时长 当前播放时长
+    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var sliderButton: UIButton!
+    @IBOutlet weak var durationLable: UILabel!
+    @IBOutlet weak var currentLable: UILabel!
     
+    //定时器
+    var timer: NSTimer?
     
+    //歌曲信息
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var singer: UILabel!
+    @IBOutlet weak var singerImg: UIImageView!
+    //播放/暂停 按钮
+    @IBOutlet weak var playBtn: UIButton!
+    
+    //用于判断是不是正在播放的音乐 用于检测是否换了歌曲
+    var isPlayingMusic: QMMusicModel?
+    
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         window = UIApplication.sharedApplication().keyWindow
@@ -21,6 +39,7 @@ class QMMusicViewController: UIViewController {
         view.frame.origin.y = (window?.bounds.size.height)!
         window?.addSubview(view)
         view.alpha = 0
+        singerImg.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 
@@ -28,10 +47,10 @@ class QMMusicViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+//MARK: - 展示当前播放界面的方法
     func showView() {
-        
         window?.userInteractionEnabled = false
+        self.view.hidden = false
         
         UIView.animateWithDuration(0.3, animations: {
             self.view.alpha = 1
@@ -39,18 +58,117 @@ class QMMusicViewController: UIViewController {
             }) { (finished) in
                 self.window?.userInteractionEnabled = true
         }
+        //检查是否换了歌曲
+        if isPlayingMusic != QMMusicTool.playingMusic {
+            //如果换了 清空信息
+            cleanPlayer()
+            removeTimer()
+            play(QMMusicTool.getCurrentMusic()?.filename)
+            
+        }
     }
-    
+//MARK: - 清空播放器
+    func cleanPlayer() {
+        QMMusicPlayingTool.player = nil
+    }
+//MARK: - 返回按钮，播放/暂停，上一曲，下一曲 按钮点击事件
     @IBAction func backBtn(sender: AnyObject) {
         
         window?.userInteractionEnabled = false
         
         UIView.animateWithDuration(0.3, animations: {
             self.view.alpha = 0
-            self.view.frame.origin.y = (self.window?.bounds.size.height)!
+            self.view.frame.origin.y = screenH
         }) { (finished) in
             self.window?.userInteractionEnabled = true
+            self.view.hidden = true
         }
     }
 
+    func play(filename: String?) {
+            QMMusicPlayingTool.playMusic(filename)
+            QMMusicPlayingTool.isPlaying = true
+            playBtn.setImage(UIImage(named: "start"), forState: .Normal)
+        //设置数据
+        setDataForMusicViewWith(QMMusicTool.getCurrentMusic()!)
+        //添加定时器
+        addTimer()
+    }
+    
+    @IBAction func playClick(sender: AnyObject) {
+        //播放和暂停的时候不会设置数据
+        if !QMMusicPlayingTool.isPlaying {
+        QMMusicPlayingTool.playMusic(QMMusicTool.getCurrentMusic()?.filename)
+            QMMusicPlayingTool.isPlaying = true
+            addTimer()
+            playBtn.setImage(UIImage(named: "start"), forState: .Normal)
+        }
+        else if QMMusicPlayingTool.isPlaying {
+        QMMusicPlayingTool.pauseMusic(QMMusicTool.getCurrentMusic()?.filename)
+            removeTimer()
+            QMMusicPlayingTool.isPlaying = false
+            playBtn.setImage(UIImage(named: "Pause"), forState: .Normal)
+        }
+    }
+    //下一首
+    @IBAction func nextClick(sender: AnyObject) {
+        let nextMusic = QMMusicTool.getNextMusic()
+        QMMusicTool.playingMusic = nextMusic
+        //歌曲改变 清空信息
+        QMMusicPlayingTool.player = nil
+        play(nextMusic?.filename)
+    }
+    //上一首
+    @IBAction func previousClick(sender: AnyObject) {
+        let previousMusic = QMMusicTool.getPreviousMusic()
+        QMMusicTool.playingMusic = previousMusic
+        //歌曲改变 清空信息
+        QMMusicPlayingTool.player = nil
+        play(previousMusic?.filename)
+    }
+    //设置数据
+    func setDataForMusicViewWith(music: QMMusicModel) {
+        name.text = music.name
+        singer.text = music.singer
+        singerImg.image = UIImage(named: music.singerImg!)
+        //用于记录歌曲刚才播放的歌曲
+        isPlayingMusic = music
+        //显示时长
+        durationLable.text = stringWith((QMMusicPlayingTool.player?.duration)!)
+        print((QMMusicPlayingTool.player?.duration)!)
+        print(stringWith((QMMusicPlayingTool.player?.duration)!))
+    }
+//MARK: - 定时器
+    //将时长转换为字符串
+    func stringWith(time: NSTimeInterval) -> String {
+        let min = time / 60
+        let second = time % 60
+        return NSString(format: "%02d:%02d", Int(min),Int(second)) as String
+    }
+    //添加定时器
+    func addTimer() {
+        updateCurrentTime()
+        timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(updateCurrentTime), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
+    }
+    //移除定时器
+    func removeTimer() {
+        timer?.invalidate()
+        //清空定时器
+        timer = nil
+    }
+    //更新当前播放时间
+    func updateCurrentTime() {
+        currentLable.text = stringWith((QMMusicPlayingTool.player?.currentTime)!)
+    }
+//MARK: - 进度条
+    //进度条点击手势
+    @IBAction func touchPregress(sender: UIGestureRecognizer) {
+        //获取点击的点
+        let point = sender.locationInView(sender.view)
+        //改变歌曲的当前播放时间
+        QMMusicPlayingTool.player?.currentTime = Double((point.x / (sender.view?.frame.size.width)!)) * (QMMusicPlayingTool.player?.duration)!
+        //更新currentLable
+        updateCurrentTime()
+    }
 }

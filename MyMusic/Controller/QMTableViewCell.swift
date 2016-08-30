@@ -9,6 +9,7 @@
 import UIKit
 
 class QMTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var singleIcon: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var singer: UILabel!
@@ -31,7 +32,7 @@ class QMTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     //MARK: - 设置数据
-    func setMusicData(music: QMMusicModel) {
+    func setMusicDataWith(music: QMMusicModel) {
         singleIcon.image = UIImage(named: music.icon!)
         name.text = music.name
         singer.text = music.singer

@@ -12,46 +12,19 @@ class QMTableViewController: UITableViewController {
     
     
     //从plist文件中读取 字典转模型 保存每一首歌曲的信息
-    lazy var musics: Array<QMMusicModel> = {
-        let musicPath = NSBundle.mainBundle().pathForResource("Music", ofType: ".plist")
-        let arr = NSArray(contentsOfFile: musicPath!)
-        var array = Array<QMMusicModel>()
-        for a in arr! {
-            let model = QMMusicModel()
-            model.modelWith(a as! [String : AnyObject])
-            array.append(model)
-        }
-        return array
-    }()
+    var musics = QMMusicTool.musics
     
     lazy var musicViewController: QMMusicViewController = {
         let musicVW = QMMusicViewController(nibName: "QMMusicViewController", bundle: nil)
-        musicVW.view.frame = CGRectMake(0, 667, 375, 667)
+        musicVW.view.frame = CGRectMake(0, screenH, screenW, screenH)
         return musicVW
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        for a in musics {
-//            print(a.name)
-//            print(a.filename)
-//            print(a.lrcname)
-//            print(a.singer)
-//            print(a.icon)
-//        }
-        
         setTableView()
-        
-//        musicView.backgroundColor = UIColor.clearColor()
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
+    //设置tableView属性
     func setTableView() {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         tableView.separatorStyle = .None
@@ -62,7 +35,7 @@ class QMTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view 数据源和代理方法
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -74,7 +47,7 @@ class QMTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("music_cell", forIndexPath: indexPath) as! QMTableViewCell
-        cell.setMusicData(musics[indexPath.row])
+        cell.setMusicDataWith(musics[indexPath.row])
         return cell
     }
     
@@ -86,7 +59,14 @@ class QMTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //取消选中的这行
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        //设置当前正在播放的歌曲
+        QMMusicTool.playingMusic = musics[indexPath.row]
+        
+        //显示播放界面(同时播放选中的歌曲)
         musicViewController.showView()
     }
+    
+    
 
 }
