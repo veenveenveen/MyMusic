@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
 
-class QMMusicViewController: UIViewController {
+class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
 //MARK: - 属性
     var window: UIWindow?
     
     //进度条 滑块 歌曲时长 当前播放时长
-    @IBOutlet weak var progressView: UIView!
-    @IBOutlet weak var sliderButton: UIButton!
+    @IBOutlet weak var progressBackground: UIView!
+    @IBOutlet weak var currentProgress: UIImageView!
     @IBOutlet weak var durationLable: UILabel!
     @IBOutlet weak var currentLable: UILabel!
-    
+        
     //定时器
     var timer: NSTimer?
     
@@ -39,8 +40,7 @@ class QMMusicViewController: UIViewController {
         view.frame.origin.y = (window?.bounds.size.height)!
         window?.addSubview(view)
         view.alpha = 0
-        singerImg.clipsToBounds = true
-        // Do any additional setup after loading the view.
+        QMMusicPlayingTool.setAudioSession()
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,9 +86,11 @@ class QMMusicViewController: UIViewController {
     }
 
     func play(filename: String?) {
-            QMMusicPlayingTool.playMusic(filename)
-            QMMusicPlayingTool.isPlaying = true
-            playBtn.setImage(UIImage(named: "start"), forState: .Normal)
+        QMMusicPlayingTool.playMusic(filename)
+        //设置player 的代理 播放完成之后。。。
+        QMMusicPlayingTool.player?.delegate = self
+        QMMusicPlayingTool.isPlaying = true
+        playBtn.setImage(UIImage(named: "start"), forState: .Normal)
         //设置数据
         setDataForMusicViewWith(QMMusicTool.getCurrentMusic()!)
         //添加定时器
@@ -96,7 +98,7 @@ class QMMusicViewController: UIViewController {
     }
     
     @IBAction func playClick(sender: AnyObject) {
-        //播放和暂停的时候不会设置数据
+        //播放和暂停的时候不设置数据
         if !QMMusicPlayingTool.isPlaying {
         QMMusicPlayingTool.playMusic(QMMusicTool.getCurrentMusic()?.filename)
             QMMusicPlayingTool.isPlaying = true
@@ -135,8 +137,6 @@ class QMMusicViewController: UIViewController {
         isPlayingMusic = music
         //显示时长
         durationLable.text = stringWith((QMMusicPlayingTool.player?.duration)!)
-        print((QMMusicPlayingTool.player?.duration)!)
-        print(stringWith((QMMusicPlayingTool.player?.duration)!))
     }
 //MARK: - 定时器
     //将时长转换为字符串
@@ -160,6 +160,7 @@ class QMMusicViewController: UIViewController {
     //更新当前播放时间
     func updateCurrentTime() {
         currentLable.text = stringWith((QMMusicPlayingTool.player?.currentTime)!)
+        currentProgress.frame.size.width = CGFloat((QMMusicPlayingTool.player?.currentTime)!) / CGFloat((QMMusicPlayingTool.player?.duration)!) * progressBackground.frame.size.width
     }
 //MARK: - 进度条
     //进度条点击手势
@@ -171,4 +172,32 @@ class QMMusicViewController: UIViewController {
         //更新currentLable
         updateCurrentTime()
     }
+//    @IBAction func panSlider(sender: UIPanGestureRecognizer) {
+//        //获取点
+//        let point = sender.locationInView(sender.view)
+//        sender.setTranslation(CGPointZero, inView: sender.view)
+//        let x = point.x
+//        
+//        sliderButton.frame.origin.x = x
+//        progressView.frame.size.width = point.x
+//        
+//        
+//        
+//    }
+//MARK: - AVAudioPlayer 代理方法
+    //播放完成之后
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        nextClick(player)
+    }
+    //被打断
+    func audioPlayerBeginInterruption(player: AVAudioPlayer) {
+        if QMMusicPlayingTool.isPlaying {
+            QMMusicPlayingTool.pauseMusic(isPlayingMusic?.filename)
+        }
+    }
+    //结束被打断
+    func audioPlayerEndInterruption(player: AVAudioPlayer, withFlags flags: Int) {
+    }
+//MAEK: - 后台播放处理
+    //在 AppDelegate 中
 }

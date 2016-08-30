@@ -16,6 +16,15 @@ class QMMusicPlayingTool: NSObject {
     //用于判断是否正在播放
     static var isPlaying: Bool = false
     
+    static func setAudioSession() {
+        //音频会话
+        let session = AVAudioSession.sharedInstance()
+        //设置会话类型(后台播放)
+        _ = try? session.setCategory(AVAudioSessionCategoryPlayback)
+        //激活会话
+        _ = try? session.setActive(true)
+    }
+    
     //播放音乐
     static func playMusic(fileName: String?) {
         guard fileName != nil else {
