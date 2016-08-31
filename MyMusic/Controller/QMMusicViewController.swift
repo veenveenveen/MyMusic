@@ -9,8 +9,16 @@
 import UIKit
 import AVFoundation
 
+protocol backButtonDelegate {
+    func refreshData()
+}
+
 class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
 //MARK: - 属性
+    
+    //刷新数据代理
+    var delegate: backButtonDelegate?
+    
     var window: UIWindow?
     
     //进度条 滑块 歌曲时长 当前播放时长
@@ -18,9 +26,6 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var currentProgress: UIImageView!
     @IBOutlet weak var durationLable: UILabel!
     @IBOutlet weak var currentLable: UILabel!
-    
-    //喜欢/不喜欢标签
-    @IBOutlet weak var likeButton: UIButton!
         
     //定时器
     var timer: NSTimer?
@@ -35,7 +40,11 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     //用于判断是不是正在播放的音乐 用于检测是否换了歌曲
     var isPlayingMusic: QMMusicModel?
     
+    //定义一个数组 用于保存加入“喜欢”的歌曲
     var likeArrar = Array<QMMusicModel>()
+    //喜欢/不喜欢标签
+    @IBOutlet weak var likeButton: UIButton!
+    //是否喜欢 用于判断
     var islike: Bool = false
     
 //MARK: - viewDidLoad
@@ -89,6 +98,8 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
             self.window?.userInteractionEnabled = true
             self.view.hidden = true
         }
+        //设置代理 刷新列表
+        delegate?.refreshData()
     }
 
     func play(filename: String?) {

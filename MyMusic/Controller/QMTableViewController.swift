@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QMTableViewController: UITableViewController {
+class QMTableViewController: UITableViewController, backButtonDelegate {
     
     
     //从plist文件中读取 字典转模型 保存每一首歌曲的信息
@@ -22,6 +22,7 @@ class QMTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        musicViewController.delegate = self
         setTableView()
     }
     //设置tableView属性
@@ -75,6 +76,9 @@ class QMTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    func refreshData() {
+        tableView.reloadData()
+    }
     
 
 }
