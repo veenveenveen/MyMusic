@@ -11,6 +11,7 @@
                 <outlet property="currentProgress" destination="4xt-OO-JEb" id="a5g-if-gUT"/>
                 <outlet property="durationLable" destination="DA5-Th-fcZ" id="lvn-kX-AIQ"/>
                 <outlet property="likeButton" destination="ywo-vE-Itc" id="U0g-o6-QwB"/>
+                <outlet property="lyricButton" destination="Gka-Rl-pNZ" id="0f6-Rb-cQt"/>
                 <outlet property="name" destination="1cj-et-ZfP" id="Avv-xB-g3A"/>
                 <outlet property="playBtn" destination="zNo-dn-9JV" id="vGQ-R5-mB0"/>
                 <outlet property="progressBackground" destination="lzU-gt-YmA" id="awv-La-hdU"/>
@@ -76,7 +77,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="she.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-vE-HBg">
-                    <rect key="frame" x="150" y="150" width="300" height="300"/>
+                    <rect key="frame" x="150" y="130" width="300" height="300"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="tBF-a9-0D4"/>
                         <constraint firstAttribute="height" constant="300" id="w3Z-iz-5Xt"/>
@@ -146,24 +147,45 @@
                         <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="uIB-rU-bno"/>
                     </connections>
                 </button>
+                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZf-kn-6GB">
+                    <rect key="frame" x="150" y="130" width="300" height="300"/>
+                    <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-Rl-pNZ">
+                    <rect key="frame" x="553" y="440" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="84e-Bz-JPs"/>
+                        <constraint firstAttribute="width" constant="25" id="X60-he-i3a"/>
+                    </constraints>
+                    <state key="normal" image="tu"/>
+                    <connections>
+                        <action selector="lyricButtonClick:" destination="-1" eventType="touchUpInside" id="ps1-Vg-8Yf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="jIp-vE-HBg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0bG-3W-AMS"/>
+                <constraint firstItem="pZf-kn-6GB" firstAttribute="trailing" secondItem="jIp-vE-HBg" secondAttribute="trailing" id="3Jg-uI-rU1"/>
                 <constraint firstItem="lzU-gt-YmA" firstAttribute="leading" secondItem="v1t-o2-F6V" secondAttribute="trailing" constant="5" id="3n2-Jf-1eB"/>
                 <constraint firstAttribute="trailing" secondItem="Ost-t8-P2y" secondAttribute="trailing" id="6FF-B5-sGi"/>
                 <constraint firstItem="Ost-t8-P2y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ds-Ab-MjC"/>
                 <constraint firstItem="Xk8-p3-Vf3" firstAttribute="centerX" secondItem="1cj-et-ZfP" secondAttribute="centerX" id="7Po-oj-3BQ"/>
                 <constraint firstAttribute="trailing" secondItem="ywo-vE-Itc" secondAttribute="trailing" constant="20" id="AYk-eC-ivN"/>
+                <constraint firstItem="Gka-Rl-pNZ" firstAttribute="centerX" secondItem="ywo-vE-Itc" secondAttribute="centerX" id="Atr-DA-PrR"/>
                 <constraint firstItem="lzU-gt-YmA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="D4t-oE-YtX"/>
                 <constraint firstItem="1cj-et-ZfP" firstAttribute="centerY" secondItem="SII-hf-8ZT" secondAttribute="centerY" id="DVd-mh-rXP"/>
                 <constraint firstItem="ywo-vE-Itc" firstAttribute="centerY" secondItem="SII-hf-8ZT" secondAttribute="centerY" id="E5p-C5-zPB"/>
+                <constraint firstItem="DA5-Th-fcZ" firstAttribute="top" secondItem="Gka-Rl-pNZ" secondAttribute="bottom" constant="20" id="EKM-ze-S2o"/>
                 <constraint firstItem="lzU-gt-YmA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FaV-h5-dv6"/>
                 <constraint firstItem="Xk8-p3-Vf3" firstAttribute="top" secondItem="1cj-et-ZfP" secondAttribute="bottom" constant="7" id="J5s-h4-14V"/>
+                <constraint firstItem="pZf-kn-6GB" firstAttribute="bottom" secondItem="jIp-vE-HBg" secondAttribute="bottom" id="KVm-7l-5jF"/>
+                <constraint firstItem="pZf-kn-6GB" firstAttribute="leading" secondItem="jIp-vE-HBg" secondAttribute="leading" id="LlY-VO-b7n"/>
                 <constraint firstAttribute="trailing" secondItem="lzU-gt-YmA" secondAttribute="trailing" constant="60" id="P9o-c6-FKG"/>
                 <constraint firstItem="7Zy-Yj-rma" firstAttribute="top" secondItem="lzU-gt-YmA" secondAttribute="bottom" id="UDy-QL-FDP"/>
                 <constraint firstItem="v1t-o2-F6V" firstAttribute="centerY" secondItem="lzU-gt-YmA" secondAttribute="centerY" id="V1p-on-5VZ"/>
                 <constraint firstAttribute="bottom" secondItem="Ost-t8-P2y" secondAttribute="bottom" id="VRZ-24-1ZU"/>
+                <constraint firstItem="pZf-kn-6GB" firstAttribute="top" secondItem="jIp-vE-HBg" secondAttribute="top" id="WDJ-1E-I6D"/>
                 <constraint firstItem="Ost-t8-P2y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aQv-R2-6A7"/>
                 <constraint firstItem="v1t-o2-F6V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="bKT-HI-Nyc"/>
                 <constraint firstAttribute="trailing" secondItem="DA5-Th-fcZ" secondAttribute="trailing" constant="5" id="f5z-ju-AKa"/>
@@ -174,7 +196,7 @@
                 <constraint firstAttribute="bottom" secondItem="7Zy-Yj-rma" secondAttribute="bottom" id="iNi-tN-g8b"/>
                 <constraint firstItem="SII-hf-8ZT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="nbX-7j-oV9"/>
                 <constraint firstItem="DA5-Th-fcZ" firstAttribute="centerY" secondItem="lzU-gt-YmA" secondAttribute="centerY" id="oV0-AB-xMg"/>
-                <constraint firstItem="jIp-vE-HBg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rXD-0T-6Rq"/>
+                <constraint firstItem="jIp-vE-HBg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="rXD-0T-6Rq"/>
                 <constraint firstItem="SII-hf-8ZT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="x5m-ld-Rtk"/>
             </constraints>
             <point key="canvasLocation" x="222" y="258"/>
@@ -199,6 +221,7 @@
         <image name="progress_full" width="7" height="7"/>
         <image name="she.jpg" width="1920" height="1080"/>
         <image name="start" width="58" height="58"/>
+        <image name="tu" width="56" height="56"/>
         <image name="unlike" width="56" height="50"/>
     </resources>
 </document>

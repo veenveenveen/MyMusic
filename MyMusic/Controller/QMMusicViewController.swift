@@ -47,6 +47,11 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     //是否喜欢 用于判断
     var islike: Bool = false
     
+    //词图
+    @IBOutlet weak var lyricButton: UIButton!
+    var islyric: Bool = false
+    
+    
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -245,6 +250,18 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
             islike = true
             likeArrar.append(QMMusicTool.getCurrentMusic()!)
 //            print(likeArrar)
+        }
+    }
+//MARK: - 歌词
+    //lyricButton 点击事件
+    @IBAction func lyricButtonClick(sender: AnyObject) {
+        if islyric {
+            lyricButton.setImage(UIImage(named: "tu"), forState: .Normal)
+            islyric = false
+        }
+        else {
+            lyricButton.setImage(UIImage(named: "ci"), forState: .Normal)
+            islyric = true
         }
     }
 }
