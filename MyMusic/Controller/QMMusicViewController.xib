@@ -147,10 +147,6 @@
                         <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="uIB-rU-bno"/>
                     </connections>
                 </button>
-                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZf-kn-6GB">
-                    <rect key="frame" x="150" y="130" width="300" height="300"/>
-                    <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-Rl-pNZ">
                     <rect key="frame" x="553" y="440" width="25" height="25"/>
                     <constraints>
@@ -166,7 +162,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="jIp-vE-HBg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0bG-3W-AMS"/>
-                <constraint firstItem="pZf-kn-6GB" firstAttribute="trailing" secondItem="jIp-vE-HBg" secondAttribute="trailing" id="3Jg-uI-rU1"/>
                 <constraint firstItem="lzU-gt-YmA" firstAttribute="leading" secondItem="v1t-o2-F6V" secondAttribute="trailing" constant="5" id="3n2-Jf-1eB"/>
                 <constraint firstAttribute="trailing" secondItem="Ost-t8-P2y" secondAttribute="trailing" id="6FF-B5-sGi"/>
                 <constraint firstItem="Ost-t8-P2y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ds-Ab-MjC"/>
@@ -179,13 +174,10 @@
                 <constraint firstItem="DA5-Th-fcZ" firstAttribute="top" secondItem="Gka-Rl-pNZ" secondAttribute="bottom" constant="20" id="EKM-ze-S2o"/>
                 <constraint firstItem="lzU-gt-YmA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FaV-h5-dv6"/>
                 <constraint firstItem="Xk8-p3-Vf3" firstAttribute="top" secondItem="1cj-et-ZfP" secondAttribute="bottom" constant="7" id="J5s-h4-14V"/>
-                <constraint firstItem="pZf-kn-6GB" firstAttribute="bottom" secondItem="jIp-vE-HBg" secondAttribute="bottom" id="KVm-7l-5jF"/>
-                <constraint firstItem="pZf-kn-6GB" firstAttribute="leading" secondItem="jIp-vE-HBg" secondAttribute="leading" id="LlY-VO-b7n"/>
                 <constraint firstAttribute="trailing" secondItem="lzU-gt-YmA" secondAttribute="trailing" constant="60" id="P9o-c6-FKG"/>
                 <constraint firstItem="7Zy-Yj-rma" firstAttribute="top" secondItem="lzU-gt-YmA" secondAttribute="bottom" id="UDy-QL-FDP"/>
                 <constraint firstItem="v1t-o2-F6V" firstAttribute="centerY" secondItem="lzU-gt-YmA" secondAttribute="centerY" id="V1p-on-5VZ"/>
                 <constraint firstAttribute="bottom" secondItem="Ost-t8-P2y" secondAttribute="bottom" id="VRZ-24-1ZU"/>
-                <constraint firstItem="pZf-kn-6GB" firstAttribute="top" secondItem="jIp-vE-HBg" secondAttribute="top" id="WDJ-1E-I6D"/>
                 <constraint firstItem="Ost-t8-P2y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aQv-R2-6A7"/>
                 <constraint firstItem="v1t-o2-F6V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="bKT-HI-Nyc"/>
                 <constraint firstAttribute="trailing" secondItem="DA5-Th-fcZ" secondAttribute="trailing" constant="5" id="f5z-ju-AKa"/>

@@ -51,7 +51,6 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var lyricButton: UIButton!
     var islyric: Bool = false
     
-    
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,7 +118,7 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
         setDataForMusicViewWith(QMMusicTool.getCurrentMusic()!)
         //添加定时器
         addTimer()
-    }
+}
     
     @IBAction func playClick(sender: AnyObject) {
         //播放和暂停的时候不设置数据

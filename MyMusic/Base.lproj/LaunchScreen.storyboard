@@ -16,12 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunchImg_6" translatesAutoresizingMaskIntoConstraints="NO" id="rOY-fA-xFg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rOY-fA-xFg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7Lr-aJ-9oX"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rOY-fA-xFg" secondAttribute="bottom" id="Mc1-Ix-FzF"/>
+                            <constraint firstAttribute="trailing" secondItem="rOY-fA-xFg" secondAttribute="trailing" id="Ya6-yr-KiR"/>
+                            <constraint firstItem="rOY-fA-xFg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ffL-hV-car"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="151" y="333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lunchImg_6" width="375" height="667"/>
+    </resources>
 </document>

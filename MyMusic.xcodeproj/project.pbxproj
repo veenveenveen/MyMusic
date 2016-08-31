@@ -47,6 +47,7 @@
 		9046DD8D1D741AA300EE6357 /* QMMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD8B1D741AA300EE6357 /* QMMusicViewController.swift */; };
 		9046DD8E1D741AA300EE6357 /* QMMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9046DD8C1D741AA300EE6357 /* QMMusicViewController.xib */; };
 		9046DD911D74380C00EE6357 /* QMMusicTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9046DD901D74380C00EE6357 /* QMMusicTool.swift */; };
+		907D6F251D76A5B600174A68 /* QMLyricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907D6F241D76A5B600174A68 /* QMLyricView.swift */; };
 		90C4E05B1D743B3D00CAE62E /* QMMusicPlayingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4E05A1D743B3D00CAE62E /* QMMusicPlayingTool.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		9046DD8B1D741AA300EE6357 /* QMMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicViewController.swift; sourceTree = "<group>"; };
 		9046DD8C1D741AA300EE6357 /* QMMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QMMusicViewController.xib; sourceTree = "<group>"; };
 		9046DD901D74380C00EE6357 /* QMMusicTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicTool.swift; sourceTree = "<group>"; };
+		907D6F241D76A5B600174A68 /* QMLyricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMLyricView.swift; sourceTree = "<group>"; };
 		90C4E05A1D743B3D00CAE62E /* QMMusicPlayingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QMMusicPlayingTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 		9046DD791D73DD9400EE6357 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				907D6F241D76A5B600174A68 /* QMLyricView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				9046DD801D73FAC900EE6357 /* UIImageView+Extension.swift in Sources */,
 				9046DD911D74380C00EE6357 /* QMMusicTool.swift in Sources */,
+				907D6F251D76A5B600174A68 /* QMLyricView.swift in Sources */,
 				9046DD271D73C5D600EE6357 /* AppDelegate.swift in Sources */,
 				9046DD7B1D73DDD000EE6357 /* QMMusicModel.swift in Sources */,
 				903FF63A1D75289C00C3DB53 /* Common.swift in Sources */,
@@ -457,12 +461,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huatengIOT.MyMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,12 +474,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huatengIOT.MyMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
