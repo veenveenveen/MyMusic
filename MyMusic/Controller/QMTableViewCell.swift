@@ -14,6 +14,8 @@ class QMTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var singer: UILabel!
     
+    @IBOutlet weak var volume_isplaying: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

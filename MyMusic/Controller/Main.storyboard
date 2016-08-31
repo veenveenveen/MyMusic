@@ -47,10 +47,18 @@
                                                 <constraint firstAttribute="height" constant="1" id="xa0-gk-sTs"/>
                                             </constraints>
                                         </view>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume_isPlaying" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-cG-qfl">
+                                            <rect key="frame" x="520" y="20" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="h1h-n2-8np"/>
+                                                <constraint firstAttribute="height" constant="20" id="wes-Pq-k8l"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hPb-Nv-TJ8" firstAttribute="leading" secondItem="pfP-SK-cXA" secondAttribute="leading" id="0Yv-KV-Pbm"/>
                                         <constraint firstItem="m5N-po-7Kh" firstAttribute="centerY" secondItem="yDV-Tj-7f2" secondAttribute="centerY" id="2m2-k5-fLG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mve-cG-qfl" secondAttribute="trailing" constant="60" id="86W-xu-kfv"/>
                                         <constraint firstItem="pfP-SK-cXA" firstAttribute="top" secondItem="m5N-po-7Kh" secondAttribute="top" id="Few-dX-qkt"/>
                                         <constraint firstItem="m5N-po-7Kh" firstAttribute="leading" secondItem="yDV-Tj-7f2" secondAttribute="leading" constant="10" id="MNl-pc-bPt"/>
                                         <constraint firstAttribute="trailing" secondItem="AY8-dx-8Rm" secondAttribute="trailing" id="ica-ta-O5V"/>
@@ -60,10 +68,14 @@
                                         <constraint firstItem="pfP-SK-cXA" firstAttribute="leading" secondItem="m5N-po-7Kh" secondAttribute="trailing" constant="15" id="zsf-8b-PRo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="Mve-cG-qfl" firstAttribute="centerY" secondItem="Et1-Lm-Ihx" secondAttribute="centerY" id="Opf-PC-eO6"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="name" destination="pfP-SK-cXA" id="ebt-RP-W2p"/>
                                     <outlet property="singer" destination="hPb-Nv-TJ8" id="eUm-3g-hph"/>
                                     <outlet property="singleIcon" destination="m5N-po-7Kh" id="Eiq-i2-5bB"/>
+                                    <outlet property="volume_isplaying" destination="Mve-cG-qfl" id="lG8-Pl-KS6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,5 +109,6 @@
     </scenes>
     <resources>
         <image name="dengziqi.jpg" width="1920" height="1080"/>
+        <image name="volume_isPlaying" width="32" height="34"/>
     </resources>
 </document>

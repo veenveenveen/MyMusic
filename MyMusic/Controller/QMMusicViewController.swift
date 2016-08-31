@@ -18,6 +18,9 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var currentProgress: UIImageView!
     @IBOutlet weak var durationLable: UILabel!
     @IBOutlet weak var currentLable: UILabel!
+    
+    //喜欢/不喜欢标签
+    @IBOutlet weak var likeButton: UIButton!
         
     //定时器
     var timer: NSTimer?
@@ -31,6 +34,9 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     
     //用于判断是不是正在播放的音乐 用于检测是否换了歌曲
     var isPlayingMusic: QMMusicModel?
+    
+    var likeArrar = Array<QMMusicModel>()
+    var islike: Bool = false
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -91,6 +97,8 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
         QMMusicPlayingTool.player?.delegate = self
         QMMusicPlayingTool.isPlaying = true
         playBtn.setImage(UIImage(named: "start"), forState: .Normal)
+        
+        
         //设置数据
         setDataForMusicViewWith(QMMusicTool.getCurrentMusic()!)
         //添加定时器
@@ -137,6 +145,14 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
         isPlayingMusic = music
         //显示时长
         durationLable.text = stringWith((QMMusicPlayingTool.player?.duration)!)
+        if likeArrar.contains(QMMusicTool.getCurrentMusic()!) {
+            likeButton.setImage(UIImage(named: "like"), forState: .Normal)
+            islike = true
+        }
+        else {
+            likeButton.setImage(UIImage(named: "unlike"), forState: .Normal)
+            islike = false
+        }
     }
 //MARK: - 定时器
     //将时长转换为字符串
@@ -200,4 +216,24 @@ class QMMusicViewController: UIViewController, AVAudioPlayerDelegate {
     }
 //MAEK: - 后台播放处理
     //在 AppDelegate 中
+//MARK: - like标签
+    //likeButtonClick
+    @IBAction func likeButtonClick(sender: AnyObject) {
+        turnLike()
+    }
+    func turnLike() {
+        if islike {
+            likeButton.setImage(UIImage(named: "unlike"), forState: .Normal)
+            let index = likeArrar.indexOf(QMMusicTool.getCurrentMusic()!)
+            likeArrar.removeAtIndex(index!)
+            islike = false
+//            print(likeArrar)
+        }
+        else if !islike {
+            likeButton.setImage(UIImage(named: "like"), forState: .Normal)
+            islike = true
+            likeArrar.append(QMMusicTool.getCurrentMusic()!)
+//            print(likeArrar)
+        }
+    }
 }

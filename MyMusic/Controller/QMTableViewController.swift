@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class QMTableViewController: UITableViewController {
     
@@ -49,12 +48,18 @@ class QMTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("music_cell", forIndexPath: indexPath) as! QMTableViewCell
         cell.setMusicDataWith(musics[indexPath.row])
+        if QMMusicTool.playingMusic == musics[indexPath.row] {
+            cell.volume_isplaying.hidden = false
+        }
+        else {
+            cell.volume_isplaying.hidden = true
+        }
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         //设置行高
-        return 70
+        return 60
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -66,6 +71,8 @@ class QMTableViewController: UITableViewController {
         
         //显示播放界面(同时播放选中的歌曲)
         musicViewController.showView()
+        
+        tableView.reloadData()
     }
     
     
