@@ -9,8 +9,6 @@
 import UIKit
 
 class QMTableViewController: UITableViewController, backButtonDelegate {
-    
-    
     //从plist文件中读取 字典转模型 保存每一首歌曲的信息
     var musics = QMMusicTool.musics
     
